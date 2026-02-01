@@ -1,0 +1,750 @@
+@charset "utf-8";
+
+/*
+ * "Comfortaa" is lisenced under the SIL Open Font License 1.1
+ * http://fonts.googleapis.com
+ * https://www.google.com/fonts/attribution
+ * http://scripts.sil.org/OFL
+ */
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+全体の設定
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+body {
+  color: #1E0000;
+  font-family: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo',
+    'Noto Sans Japanese', Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-animation: fadeIn 1.5s ease 0s 1 normal;
+  animation: fadeIn 1.5s ease 0s 1 normal;
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 1
+  }
+}
+
+a {
+  color: #C00;
+  text-decoration: none;
+}
+
+a:hover {
+  opacity: 0.8;
+}
+
+.btn-col {
+  background-color:#341505;
+  color:#FFF;
+  text-shadow: none;
+}
+.btn-col:hover {
+  color:#FFF;
+}
+
+a.cake-link {
+  color:#341505;
+}
+a.cake-link:hover {
+  color:#C00;
+  text-decoration: none;
+}
+
+a.cake-link .en {
+	color:#C00;
+	font-weight:bold;
+	}
+
+.mg-R15 {
+	margin-right:15px;
+	}
+
+.bg-darkgray {
+  background-color: #a9a9a9;
+}
+
+.rec-red {
+  color: #c70216;
+  font-weight: bold;
+}
+
+.container,
+.container-fulid {
+  overflow: hidden;
+  margin:10px auto 0;
+}
+
+/* 見出しを太字に */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold !important;
+}
+
+/* 英字タイトルをWEBフォントに */
+h1,
+header a,
+.display-4,
+.display-3,
+.lead,
+.circle-badges,
+.cake-sub,
+.widget-title {
+  font-family: adobe-garamond-pro, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* PageTOP */
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    width: 100px;
+    padding: 30px 0;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
+}
+
+/*========= 上部固定させるためのCSS ===============*/
+#header {
+  height: 80px; /*高さ指定*/
+  width:100%;/*横幅指定*/
+  /*以下はレイアウトのためのCSS*/
+  background:#fff;
+  color:#341505;
+  padding: 15px 10px 10px 10px;
+  margin-bottom: 0;
+  font-size: 2.8em;
+}
+
+/*JSを使いfixedクラスが付与された際の設定*/
+#header.fixed{
+  position: fixed;/*fixedを設定して固定*/
+    z-index: 999;/*最前面へ*/
+    top:0;/*位置指定*/
+    left:0;/*位置指定*/
+}
+
+
+/* スライドメニューtest */
+.slide-title {
+	padding:25px 0 10px;
+	font-size:1.4rem;
+	text-align:center;
+}
+
+header.slide {
+	margin-bottom:95px !important;
+	}
+
+
+/*　ページ内リンクメニュー　*/
+.text-linkmenu {
+  display: flex;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.text-linkmenu li {
+  display: flex;
+  align-self: auto;
+  flex: 1;
+  border-right: 1px solid #FFF;
+  min-width: 0;
+}
+
+.text-linkmenu li:first-child{
+  border-left: 1px solid #FFF;
+}
+.text-linkmenu a{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  padding: 1em;
+  color: #1E0000;
+  text-decoration: none;
+  text-align: center;
+  background: #C7B484;
+  word-break: break-all;
+  box-sizing: border-box;
+  font-family: 'ヒラギノ角ゴ Pro', 'Hiragino Kaku Gothic Pro', 'メイリオ', 'Meiryo',
+    'Noto Sans Japanese', Osaka, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+}
+
+/* もっとみるリンクボタン */
+/* 019 */
+.button019 a {
+    background: #C7B484;
+    border-radius: 3px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 88%;
+    padding: 10px 25px;
+    color: #313131;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+.button019 a:after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  bottom: 0;
+  right: 2rem;
+  font-size: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: right 0.3s;
+  width: 6px;
+  height: 6px;
+  border-top: solid 2px currentColor;
+  border-right: solid 2px currentColor;
+  transform: translateY(-50%) rotate(45deg);
+}
+.button019 a:hover {
+  background: #1f0c04;
+  color: #FFF;
+}
+.button019 a:hover:after {
+  right: 1.4rem;
+}
+
+
+
+/* 温度帯注意イメージ */
+.soryo {
+  max-width: 100%;
+  margin: 0 auto 20px;
+  padding: 10px;
+  text-align: center;
+}
+
+
+/* 罫線付きタイトル */
+.head-border {
+  display: flex;
+  align-items: center;
+  margin:2em auto;
+  font-size: 1.4rem;
+}
+
+.head-border:before,
+.head-border:after {
+  content: "";
+  height: 1px;
+  flex-grow: 1;
+  background-color: #666;
+}
+
+.head-border:before {
+  margin-right: 1rem;
+}
+
+.head-border:after {
+  margin-left: 1rem;
+}
+
+
+
+.lead-txt h2 {
+	font-size:2.5rem;
+	}
+
+.lead-txt {
+	text-align:center;
+	padding:3px 20px 0;
+	font-family: '游明朝', 'Yu Mincho', YuMincho, serif;
+    font-weight: normal;
+	line-height:1.8;
+	}
+
+/* シェフ */
+  .aboutChef {
+   background: #0a0a0a;
+    margin: 50px auto ;
+    padding: 30px;
+    text-align: center;
+    background-image: url(../img/chef.jpg);
+    background-position: 90% 90px;
+    background-size: 450px;
+    background-repeat: no-repeat;
+	overflow:hidden;
+  }
+  
+  .aboutChef h2 {
+  color:#c49a46;
+  }
+  
+  .aboutChef h3 {
+    color: #fff;
+	padding: 10px;
+	line-height: 1.5;
+	border-bottom: #fff solid 1px;
+	width: 54%;
+	margin:0 15px 10px 20px;
+  }
+  .aboutChef h3 .chef {
+    font-size: 1.2em;
+    display: block;
+  }
+  
+  .aboutChef h2,
+  .aboutChef h3 {
+	font-family: '游明朝', 'Yu Mincho', YuMincho, serif;
+    font-weight: normal;  
+	  }
+
+  .award img {
+	margin:20px auto;
+	/*margin-right:0!important;*/
+	width:80%;
+	text-align:center;
+	display:block;
+  }
+  
+.aboutChef p.chef-txt {
+	color: #ffffff;
+	padding: 20px 5px 0 0;
+    line-height: 1.9;
+	text-align: left;
+	font-size:16px;
+	width:95%;
+	margin:0 15px 10px 20px;
+	clear:both;
+}
+
+.award {
+	float:left;
+	margin:0;
+	width: 54%;
+	}
+.award img {
+	text-align:center;
+	}
+
+.br-sp {display: none; }
+
+/* ケーキ紹介 */
+.cakes {
+  position: relative;
+  margin: 5% 0;
+  padding: 0;
+
+}
+
+.cake-name{
+	  font-size:1.8rem;
+	  margin-bottom:8px;
+	  }
+
+.price {
+	margin-bottom:15px;
+	}
+
+.price a {
+  display: block;
+  line-height: 1.5;
+  font-size: 1.3rem;
+}
+
+.comment {
+	font-size:0.9rem;
+	/*text-shadow:#FFF 1px 1px 2px;*/
+	}
+
+
+/* ------------------------------
+フッター
+--------------------------------- */
+footer {
+  padding: 38px 0;
+  text-align: center;
+}
+
+.cakes-copy {
+  padding-top: 15px;
+}
+
+
+
+/*リンクの形状*/
+#page-top a{
+	display: flex;
+	justify-content:center;
+	align-items:center;
+	background:#942D2F;
+	border-radius: 5px;
+	width: 66px;
+	height: 66px;
+	color: #fff;
+	text-align: center;
+	text-transform: uppercase; 
+	text-decoration: none;
+	font-size:0.6rem;
+	transition:all 0.3s;
+}
+
+#page-top a:hover{
+	background: #777;
+}
+
+/*リンクを右下に固定*/
+#page-top {
+	position: fixed;
+	right: 10px;
+	bottom:10px;
+	z-index: 2;
+    /*はじめは非表示*/
+	opacity: 0;
+	transform: translateY(100px);
+}
+
+/*　上に上がる動き　*/
+
+#page-top.UpMove{
+	animation: UpAnime 0.5s forwards;
+}
+@keyframes UpAnime{
+  from {
+    opacity: 0;
+	transform: translateY(100px);
+  }
+  to {
+    opacity: 1;
+	transform: translateY(0);
+  }
+}
+
+/*　下に下がる動き　*/
+
+#page-top.DownMove{
+	animation: DownAnime 0.5s forwards;
+}
+@keyframes DownAnime{
+  from {
+  	opacity: 1;
+	transform: translateY(0);
+  }
+  to {
+  	opacity: 1;
+	transform: translateY(100px);
+  }
+}
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+トップページ
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* トップ画像 */
+.top-image {
+  background-image: url("../img/vd_2023_top_0.JPG");
+  background-size: cover;
+  background-position: top center;
+  height: 815px;
+  box-shadow: 0px 5px 6px 0px #000;
+  border-radius: 0;
+  padding-top: 66.66%;
+}
+
+#top-scroll-button {
+  position: fixed;
+  bottom: 80px;
+  right: 120px;
+  z-index: 1;
+}
+
+#top-scroll-button a {
+  font-size: 1rem;
+  background: rgb(158 158 158 / 70%);
+  text-decoration: none;
+  color: #000;
+  text-align: center;
+  display: block;
+  border: 1px solid #9e9e9e;
+  width: 60px;
+  height: 60px;
+  line-height: 3.333em;
+}
+
+#top-scroll-button a:hover {
+  text-decoration: none;
+  color: #fff;
+  background: #1E0000;
+  opacity: 1;
+}
+
+
+/* ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+
+メディアクエリ
+
+＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝ */
+
+/* 中デバイス（タブレット, 992px 未満）
+============================================== */
+@media screen and (max-width: 991.98px) {
+  .logo-mark {
+    left: 5%;
+  }
+
+  .main-txt {
+    left: 5%;
+  }
+
+  .zigzag {
+    margin: 10% 0;
+  }
+
+  .light-zigzag {
+    margin: 10% 0 0;
+  }
+/*
+  .main-txt {
+    top: 80%;
+    left: 5%;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+  }
+*/
+  .br-sp {display: none; }
+}
+
+/* END */
+
+/* 小デバイス（横向きモバイル, 768px 未満）
+============================================== */
+@media screen and (max-width: 767.98px) {
+
+  /* ロゴマークを小さく設定 */
+  .logo-mark {
+    height: 140px;
+    width: 140px;
+  }
+
+  .logo-mark img {
+    width: 50%;
+  }
+
+  .lead {
+    font-size: 1rem;
+  }
+
+  .circle-badges {
+    top: -10px;
+    width: 100px;
+    height: 100px;
+  }
+/*
+  .top-image {
+    background-image: url("../img/vd_2023_top_0.JPG");
+    background-size: cover;
+    background-position: top center;
+    height: 360px;
+    box-shadow: 0px 5px 6px 0px #000;
+    border-radius: 0;
+  }
+  .main-txt {
+    top: 75%;
+    left: 5%;
+    background: rgba(0,0,0,0.6);
+    padding: 15px;
+  }
+*/
+  .mg-R15 {
+    margin-right: 0;
+  }
+
+  #top-scroll-button {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .aboutChef {
+    padding: 20px 10px;
+    background-position: 50% 200px;
+	display: flex;
+  flex-direction: column;
+  }
+
+  .aboutChef h3 {
+	border-bottom: none;
+  line-height: 1.5;
+	width: 100%;
+	margin-bottom:380px;
+  }
+  .aboutChef h3 .chef {
+   font-size: 1.4em;
+  }
+
+
+
+}
+
+/* END */
+
+/* 極小デバイス（縦向きモバイル, 576px 未満）
+	============================================== */
+@media screen and (max-width: 575.98px) {
+
+  .display-3,
+  .display-4 {
+    font-size: 2rem;
+  }
+
+  .logo-mark {
+    left: 5%;
+    top: -10px;
+  }
+
+  .logo-mark img {
+    top: 25%;
+    left: 25%;
+  }
+
+  .zigzag,
+  .light-zigzag {
+    margin: 15% 0;
+  }
+
+  .stitch img {
+    width: 100%;
+  }
+/*
+  .top-image {
+    background-image: url("../img/vd_2023_top_0.JPG");
+    background-size: cover;
+    background-position: top center;
+    height: 400px;
+    box-shadow: 0px 5px 6px 0px #000;
+    border-radius: 0;
+  }
+  .main-txt {
+    top: 83%;
+    left: 5%;
+    background: rgba(0,0,0,0.6);
+    padding: 5px 10px;
+  }
+*/
+  .mg-R15 {
+    margin-right: 0;
+  }
+  
+  .lead-txt h2 {
+	font-size:1.8rem;
+	}
+
+  #top-scroll-button a {
+    width: 40px;
+    height: 40px;
+    line-height: 2em;
+  }
+  
+  .cake-name{
+	  font-size:1.4rem;
+	  margin-bottom:8px;
+	  }
+	  
+  .aboutChef h3{
+		  font-size: 1.6em;
+		  margin:0 auto 20px;
+	  }
+  .aboutChef h3 .chef{
+		  font-size: 1.3em;
+	  }
+  
+  .aboutChef .award img {
+	margin:65px auto 0;
+	width:95%;
+	display:block;
+  }
+  
+  .aboutChef .chef-txt {
+	  margin:0;
+	  }
+  
+  .aboutChef {
+    padding: 20px 10px;
+    background-position: 50% 200px;
+	display: flex;
+  flex-direction: column;
+  }
+
+  .aboutChef h3 {
+	border-bottom: none;
+  line-height: 1.3;
+	width: 100%;
+	margin-bottom:280px;
+  }
+  .aboutChef h3 .chef {
+   font-size: 1.4em;
+  }
+
+  .aboutChef p{
+	font-size:1.2em;
+	margin:10px;
+	width:97%;
+}
+
+.child_1{
+  order: 2;
+}
+  .child_2{
+  order: 1;
+}
+
+  .child_4{
+  order: 1;
+}
+  .child_5{
+  order: 2;
+}
+  .child_6{
+  order: 3;
+}
+
+  .br-sp {display: block; }
+  .br-no {display: none; }
+
+}
+
+/* END */
