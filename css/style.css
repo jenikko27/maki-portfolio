@@ -30,11 +30,11 @@
 /*CSSカスタムプロパティ（サイト全体を一括管理する為の設定）
 ---------------------------------------------------------------------------*/
 :root {
-	--primary-color: #8a7156;		/*テンプレートのメインとなる色*/
+	--primary-color: #3b2e1f;		/*テンプレートのメインとなる色*/
 	--primary-text-color: #ccc;	/*メインの上で使うテキスト色*/
 	
-    --accent-color: #606972;	/*テンプレートのアクセントとなる色*/
-    --accent-text-color: #ccc;	/*アクセントの上で使うテキスト色*/
+    --accent-color: #e8edf1;	/*テンプレートのアクセントとなる色*/
+    --accent-text-color: #252a30;	/*アクセントの上で使うテキスト色*/
 }
 
 
@@ -157,8 +157,8 @@ body:not(.home) #container {
 
 /*ロゴ共通*/
 header #logo {
-	width: 250px;		/*ロゴの幅*/
-	margin: 3rem auto;	/*上下に３文字分のスペースを空ける*/
+	width: 320px;		/*ロゴの幅*/
+	margin: 3rem auto 1rem;	/*上下に３文字分のスペースを空ける*/
 }
 
 /*トップページのロゴ共通*/
@@ -694,7 +694,7 @@ animationの行の「0.1s」が文字の出現のなめらかさで、大きい�
 
 .meta {
   font-size: 0.95rem;
-  color: #FFF;
+  color: #252a30;
 }
 
 /* About */
@@ -820,19 +820,84 @@ animationの行の「0.1s」が文字の出現のなめらかさで、大きい�
   width: 100%;
 }
 
+.br-pc {
+	display: block;
+}
+.br-sp {
+	display: none;
+}
+
+/* サイトリニューアル：ケーススタディ用 */
+.renewal-case {
+  background: #fff;
+  color: #333;
+}
+
+/* Before / After */
+.renewal-compare {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+  margin: 1.5rem 0 2rem;
+}
+
+.renewal-compare figure {
+  margin: 0;
+}
+
+.renewal-compare img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.renewal-compare figcaption {
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+/* 改善ポイント */
+.renewal-points {
+  padding-left: 1.2rem;
+}
+
+.renewal-points li {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.renewal-points strong {
+  display: inline-block;
+  margin-bottom: 0.2rem;
+}
+
 
 
 /* スマホ対応 */
 @media screen and (max-width: 600px) {
+  section {
+	padding: 1rem
+  }
   .name {
     font-size: 2rem;
   }
-
   .container {
     padding: 40px 16px;
   }
   .list-grid-trimming {
     grid-template-columns: repeat(2, 1fr);
   }
+  .renewal-compare {
+    grid-template-columns: 1fr;
+  }
+  .br-pc {
+	display: none;
+}
+  .br-sp {
+	display: block;
+}
 }
 
